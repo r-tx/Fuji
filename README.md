@@ -71,13 +71,13 @@ Please make sure to read the documentation on how to prepare your drive:
 
 [![Documentation](https://badgen.net/static/color/Documentation/red?label&scale=2)][docs]
 
-The following video shows the entire acquisition process, step by step:
+The following video shows the acquisition process in a live macOS environment:
 
-<a href="https://www.youtube.com/watch?v=9bEiizjySHA">
-    <img src="./packaging/supporters/fuji-video.png" width="480">
+<a href="https://www.youtube.com/watch?v=9ZkLdFodhzM">
+    <img src="https://i3.ytimg.com/vi/9ZkLdFodhzM/maxresdefault.jpg" width="480">
 </a>
 
-_[Getting Started with Fuji - The Logical Choice for Mac Imaging](https://www.youtube.com/watch?v=9bEiizjySHA) on YouTube_
+_[Mac Imaging Made Easy with Fuji](https://www.youtube.com/watch?v=9ZkLdFodhzM) on YouTube_
 
 
 [releases]: https://github.com/Lazza/Fuji/releases
