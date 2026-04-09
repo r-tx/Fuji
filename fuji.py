@@ -16,10 +16,12 @@ from acquisition.asr import AsrMethod
 from acquisition.ditto import DittoMethod
 from acquisition.rsync import RsyncMethod
 from acquisition.sysdiagnose import SysdiagnoseMethod
+from checks.abstract import Check
 from checks.folders import FoldersCheck
 from checks.free_space import FreeSpaceCheck
 from checks.name import NameCheck
 from checks.network import NetworkCheck
+from checks.running_apps import RunningAppsCheck
 from meta import AUTHOR, HOMEPAGE, VERSION
 from shared.environment import RECOVERY, AdaptiveHyperLinkCtrl, attempt_ramdisk
 from shared.utils import (
@@ -39,7 +41,14 @@ ALL_METHODS: List[AcquisitionMethod] = [
     SysdiagnoseMethod(),
 ]
 METHODS = [m for m in ALL_METHODS if m.available()]
-CHECKS = [NameCheck(), FoldersCheck(), FreeSpaceCheck(), NetworkCheck()]
+ALL_CHECKS: List[Check] = [
+    NameCheck(),
+    FoldersCheck(),
+    FreeSpaceCheck(),
+    NetworkCheck(),
+    RunningAppsCheck(),
+]
+CHECKS = [c for c in ALL_CHECKS if c.active()]
 PARAMS = Parameters()
 
 INPUT_WINDOW: "InputWindow"

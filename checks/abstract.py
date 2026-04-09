@@ -19,6 +19,9 @@ class CheckResult:
 class Check(ABC):
     name = "Abstract check"
 
+    def active(self) -> bool:
+        return True
+
     @abstractmethod
     def execute(self, params: Parameters) -> CheckResult:
         pass
