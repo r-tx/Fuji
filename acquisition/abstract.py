@@ -110,9 +110,11 @@ class AcquisitionMethod(ABC):
         if awake:
             arguments = ["caffeinate", "-dimsu"] + arguments
 
-        command = shlex.join(arguments) + " 2>&1"
+        command = shlex.join(arguments)
         if redirect is not None:
-            command = command + " > " + shlex.quote(redirect.as_posix())
+            command = command + " > " + shlex.quote(redirect.as_posix()) + " 2>&1"
+        else:
+            command = command + " 2>&1"
 
         p = subprocess.Popen(
             command,
